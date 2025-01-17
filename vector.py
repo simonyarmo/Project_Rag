@@ -1,10 +1,8 @@
 from langchain_openai import OpenAIEmbeddings
 from chromadb import Client
 from chromadb.config import Settings
-from AIkey import get_API_KEY
 
-key = get_API_KEY()
-embeddings_model = OpenAIEmbeddings(model="text-embedding-ada-002", openai_api_key=key)
+embeddings_model = OpenAIEmbeddings(model="text-embedding-ada-002", openai_api_key="Your API KEY goes here")
 
 
 def embeddedModel(name):
