@@ -1,4 +1,4 @@
-from AIkey import get_API_KEY
+
 import vector
 from openai import OpenAI
 
@@ -13,7 +13,7 @@ def generate(data, user_question):
     ]
     
     while text != "done":
-        client = OpenAI(api_key=get_API_KEY())
+        client = OpenAI(api_key="Your API KEY goes here")
         if i > 0:
             text = input("Enter feedback for the agent or enter 'done': \n")
             message.append({"role": "user", "content": text})
