@@ -19,7 +19,7 @@ def generate(data, user_question):
             message.append({"role": "user", "content": text})
 
         completion = client.chat.completions.create(
-            model="ft:gpt-4o-mini-2024-07-18:splashbi:create-query1:AXrti2YQ",
+            model="gpt-4o",
             messages=message
         )
         
