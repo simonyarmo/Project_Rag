@@ -8,7 +8,7 @@ def generate(data, user_question):
     i = 0
     text = "ok"
     message = [
-        {"role": "system", "content": "You are a SQL Generator. Generate an SQL query based on the data provided and the user's question."}, 
+        {"role": "system", "content": "You are a SQL finder. Pull the sql tables that have to do with the users question."}, 
         {"role": "user", "content": "Question: " + user_question + " Data: Table: " + data}
     ]
     
