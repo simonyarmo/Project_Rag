@@ -29,10 +29,6 @@ def generate(data, user_question):
         i += 1
 
 
-# def generate_query():
-#     print("hi")
-
-
 
 
 
@@ -41,7 +37,4 @@ if __name__ == "__main__":
     client = vector.embeddedModel(collection_name)
     user, arr = vector.ask_agent(client, collection_name)
     data = ", ".join(arr)
-    print(data)
-    print(user)
     generate(data, user)
-#     print(generate_query())
