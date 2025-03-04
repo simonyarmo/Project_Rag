@@ -1,4 +1,24 @@
-How to run the program.
+# Project RAG
+## Project Description
+This project is to use an OpenAI model to vector search using RAG. This project uses openAI model text-embedding-ada-002 for the embedding model and chatgpt-4o for the llm. In vector.py, there are two functions. 
+
+    def embeddedModel(name):
+    Parameters: Name - name of the vector store. 
+    This function takes a file and embeddeds each line into a vector space using the chromadb library as the vector store. The function returns the client that stores the vector store.
+
+    def ask_agent(client, name):
+    Parameters: Client - the vector store returned from embeddedModel(Name), Name - name of the vector store
+    This function prompts the user for a query. It then embeddes the query and does a RAG vector search on the vectore database. It will return the most likely related lines from the vector store as an array and the users query.
+
+In generate_sql_query.py there is one function 
+
+    def generate(data, user_question): Parameters: data - a string version of the array that was returned in ask_agent, user_querstion - the users query from ask_agent
+    This function formulates a response based off the users query and the data provided from the rag. It first creates a memory array to store the conversation between the agent and the user. This is used for feedback to the agent. It then creates an openAI client to call the model. The function prints the response and enters a feedback loop. If you are happy with the response you can enter "done" to exit the loop. 
+    
+
+    
+
+## How to run the program.
 
 **Setting up API Key**
   Go to openAI 
